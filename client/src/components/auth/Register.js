@@ -1,0 +1,26 @@
+import React, { Component } from "react";
+
+class Register extends Component {
+  state = { username: "", password: "", department: "" };
+
+  render() {
+    return (
+      <form>
+        <div>
+          <label htmlFor="username">Username</label>
+          <input type="text" id="username" />
+          <label htmlFor="department">Department</label>
+          <input type="text" id="department" />
+          <label htmlFor="password">Password</label>
+          <input type="text" id="password" type="password" />
+        </div>
+      </form>
+    );
+  }
+
+  handleChange = e => {
+    this.setState({ [e.target.id]: e.target.value });
+  };
+}
+
+export default Register;
