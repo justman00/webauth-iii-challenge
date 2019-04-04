@@ -9,7 +9,7 @@ module.exports = (req, res, next) => {
 
   jwt.verify(token, "qwertyuiop", (err, newToken) => {
     if (err) {
-      res.status(500).json({ msg: "You shall not pass" });
+      res.status(500).json({ err });
     }
 
     req.decodedToken = newToken;

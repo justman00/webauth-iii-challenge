@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, NavLink } from "react-router-dom";
+import axios from "axios";
 
 import Login from "./auth/Login";
 import Register from "./auth/Register";
